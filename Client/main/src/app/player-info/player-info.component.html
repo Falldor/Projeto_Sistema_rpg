@@ -1,0 +1,47 @@
+<form [formGroup]="form">
+    <div>
+        <label>Nome</label>
+        <input placeholder="nome do jogador" formControlName="nome">
+    </div>
+    <div>
+        <label>tipo</label>
+        <input placeholder="nome do jogador" formControlName="tipo">
+    </div>
+    <div>
+        <button type="submit" (click)="onSubmit()">Salvar</button>
+        <button type="button" [routerLink]="['']">Cancelar</button>
+    </div>
+</form>
+<div *ngIf="id != null">
+    <div>
+        <h3>Vida: {{vida}}</h3>
+        <h3>Estresse: {{estresse}}</h3>
+        <h3>Nivel Fisico: {{nivelFisico}}</h3>
+        <h3>Nivel Mental: {{nivelMental}}</h3>
+    </div>
+    <button (click)="openDialog()" >Criar Habilidade</button>
+    <div>
+        <div>
+            <h1>Habilidades Fisicas</h1>
+            <mat-card *ngFor="let habilidade of habilidadesFisica$ | async">
+                <mat-card-header>{{habilidade.nome}}</mat-card-header>
+                <mat-card-content>
+                    <button>-</button>
+                    {{habilidade.nivel}}
+                    <button>+</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div>
+            <h1>Habilidades Mentais</h1>
+            <mat-card *ngFor="let habilidade of habilidadesMental$ | async">
+                <mat-card-header>{{habilidade.nome}}</mat-card-header>
+                <mat-card-content>
+                    <button>-</button>
+                    {{habilidade.nivel}}
+                    <button>+</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

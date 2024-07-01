@@ -1,0 +1,16 @@
+<div class="background">
+    <h1 mat-dialog-title class="titulo">Criar Habilidade</h1>
+    <div mat-dialog-content >
+        <form class="container" [formGroup]="form">
+            <label class="label">Nome</label>
+            <input type="text" placeholder="nome da habilidade" class="input" formControlName="nome">
+            <label class="label">Tipo de habilidade</label>
+            <input tipe="text" placeholder="físico ou mental" class="input" formControlName="tipo" [(ngModel)]="data.tipo">
+        </form>
+    </div>
+    <div mat-dialog-content class="container">
+        <button type="submit" class="btn_criar" (click)="onSubmit()" [mat-dialog-close]="data.tipo">Criar</button>
+        <button class="btn_cancelar" mat-dialog-close>Cancelar</button>
+    </div>
+</div>
+

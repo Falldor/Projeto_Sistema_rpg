@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    
+}
+.cardExemplo{
+    background-color: rgb(200, 202, 204);
+    width: 20%;
+    height: 100%;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card_container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}

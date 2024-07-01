@@ -1,0 +1,27 @@
+<body>
+    <button [routerLink]="['infoPlayer']">Criar Personagem</button>
+    <button>Novo Combate</button>
+    <div class="card_container">
+
+
+        <mat-card class="cardExemplo" *ngFor="let player of elements$ | async" [routerLink]="['infoPlayer',player.id]">
+            <mat-card-header>
+                <h1>{{player.nome}}</h1>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{player.exp}}</p>
+                <p>{{player.vida}}</p>
+                <p>{{player.estresse}}</p>
+                <div class="nivel_container">
+                    <span class="nivel_element">Nivel Fisico: </span>
+                    <span class="nivel_element">{{player.nivelFisico}}</span>
+                </div>
+                <div class="nivel_container">
+                    <span class="nivel_element">Nivel Mental: </span>
+                    <span class="nivel_element">{{player.nivelMental}}</span>
+                </div>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</body>

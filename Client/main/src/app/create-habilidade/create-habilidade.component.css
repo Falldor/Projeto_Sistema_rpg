@@ -1,0 +1,35 @@
+.background{
+    background-color: black;
+}
+
+.titulo{
+    color: white;
+}
+.label{
+    color: white;
+    margin-right: 2%;
+}
+
+.input{
+    margin-right: 2%;
+    border: none;
+    line-height: none;
+}
+
+
+.container{
+    padding: 0;
+    text-align: center;
+}
+
+.btn_criar,.btn_cancelar{
+    margin-bottom: 1%;
+}
+
+.btn_criar{
+    margin-right: 1%;
+    background-color: yellow;
+}
+.btn_cancelar{
+    margin-left: 1%;
+}
